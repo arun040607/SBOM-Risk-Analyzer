@@ -1,0 +1,62 @@
+[
+  {
+    "app_id": "APP01",
+    "application_name": "Employee Portal",
+    "owner": "Arun",
+    "business_criticality": "Critical"
+  },
+  {
+    "app_id": "APP02",
+    "application_name": "Finance System",
+    "owner": "Finance Team",
+    "business_criticality": "Critical"
+  },
+  {
+    "app_id": "APP03",
+    "application_name": "Inventory Manager",
+    "owner": "Operations Team",
+    "business_criticality": "High"
+  },
+  {
+    "app_id": "APP04",
+    "application_name": "CRM Platform",
+    "owner": "Sales Team",
+    "business_criticality": "High"
+  },
+  {
+    "app_id": "APP05",
+    "application_name": "Analytics Dashboard",
+    "owner": "Data Team",
+    "business_criticality": "Medium"
+  },
+  {
+    "app_id": "APP06",
+    "application_name": "Customer Support System",
+    "owner": "Support Team",
+    "business_criticality": "Medium"
+  },
+  {
+    "app_id": "APP07",
+    "application_name": "HR Management System",
+    "owner": "HR Team",
+    "business_criticality": "Medium"
+  },
+  {
+    "app_id": "APP08",
+    "application_name": "Payment Gateway",
+    "owner": "Payments Team",
+    "business_criticality": "Critical"
+  },
+  {
+    "app_id": "APP09",
+    "application_name": "Supply Chain Manager",
+    "owner": "Logistics Team",
+    "business_criticality": "High"
+  },
+  {
+    "app_id": "APP10",
+    "application_name": "E-Commerce Platform",
+    "owner": "Product Team",
+    "business_criticality": "High"
+  }
+]

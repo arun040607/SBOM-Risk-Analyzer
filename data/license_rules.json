@@ -1,0 +1,92 @@
+[
+  {
+    "license": "MIT",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Highly permissive license with minimal restrictions on use, modification, and distribution."
+  },
+  {
+    "license": "Apache-2.0",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Permissive license that also grants an explicit patent license, widely accepted in enterprise use."
+  },
+  {
+    "license": "BSD-3-Clause",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Permissive license requiring only attribution and non-endorsement, safe for commercial use."
+  },
+  {
+    "license": "BSD-2-Clause",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Simplified permissive license similar to BSD-3-Clause without the non-endorsement clause."
+  },
+  {
+    "license": "ISC",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Functionally equivalent to MIT, permissive and safe for proprietary integration."
+  },
+  {
+    "license": "Zlib",
+    "compatibility": "Compatible",
+    "risk_level": "Low",
+    "explanation": "Permissive license with minimal restrictions, commonly used for compression and utility libraries."
+  },
+  {
+    "license": "MPL-2.0",
+    "compatibility": "Conditional",
+    "risk_level": "Medium",
+    "explanation": "File-level weak copyleft license; modified files must remain MPL-licensed but can be combined with proprietary code."
+  },
+  {
+    "license": "LGPL-2.1",
+    "compatibility": "Conditional",
+    "risk_level": "Medium",
+    "explanation": "Weak copyleft license allowing linking from proprietary code, but modifications to the library itself must be shared."
+  },
+  {
+    "license": "LGPL-3.0",
+    "compatibility": "Conditional",
+    "risk_level": "Medium",
+    "explanation": "Similar to LGPL-2.1 with additional patent and anti-tivoization clauses; safe for dynamic linking only."
+  },
+  {
+    "license": "EPL-1.0",
+    "compatibility": "Conditional",
+    "risk_level": "Medium",
+    "explanation": "Weak copyleft license requiring source disclosure of modifications when distributed."
+  },
+  {
+    "license": "GPL-2.0",
+    "compatibility": "Incompatible",
+    "risk_level": "Critical",
+    "explanation": "Strong copyleft license requiring derivative works to be released under GPL, generally incompatible with proprietary software."
+  },
+  {
+    "license": "GPL-3.0",
+    "compatibility": "Incompatible",
+    "risk_level": "Critical",
+    "explanation": "Strong copyleft license with additional patent and anti-tivoization terms, high legal risk if embedded in closed products."
+  },
+  {
+    "license": "AGPL-3.0",
+    "compatibility": "Incompatible",
+    "risk_level": "Critical",
+    "explanation": "Strongest copyleft license extending obligations to network use (SaaS), very high risk for proprietary products."
+  },
+  {
+    "license": "Proprietary",
+    "compatibility": "Restricted",
+    "risk_level": "High",
+    "explanation": "Usage governed by a third-party commercial license; requires legal review of terms before distribution."
+  },
+  {
+    "license": "Unknown",
+    "compatibility": "Unverified",
+    "risk_level": "High",
+    "explanation": "No license metadata could be identified; usage rights are unverified and should be treated as high risk until confirmed."
+  }
+]
