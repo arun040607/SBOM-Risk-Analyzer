@@ -15,8 +15,13 @@ from risk_calculator import calculate_risk
 from license_checker import check_licenses, summarize_by_license, summarize_by_application
 from report_generator import generate_application_report, generate_summary
 
-app = Flask(__name__)
+from flask import Flask
+import os
 
+app = Flask(
+    __name__,
+    template_folder=os.path.join(os.path.dirname(__file__), "..", "templates")
+)
 DATA_FOLDER = "data"
 
 
