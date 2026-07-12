@@ -1,0 +1,50 @@
+application,library_name,issue_type,severity,risk_score,recommendation,is_vulnerable,is_license_conflict,is_unmaintained
+Employee Portal,log4j@2.14.1,Transitive Vulnerability,Critical,150.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-44228.,False,False,False
+Employee Portal,log4j@2.14.1,Transitive Vulnerability,Critical,140.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-45046.,False,False,False
+Employee Portal,spring-core@5.3.9,Vulnerable Library,Critical,103.0,Upgrade past >=5.3.0 <5.3.18 to remediate CVE-2022-22965 (Critical).,True,False,False
+Employee Portal,log4j@2.14.1,Unmaintained Library,Medium,35.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Employee Portal,gpl-core-utils@1.0.0,License Conflict,Critical,35.0,Review legal implications of GPL-3.0 before shipping; consider an alternative library.,False,True,False
+Finance System,lodash@4.17.19,Transitive Vulnerability,High,117.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-23337.,False,False,False
+Finance System,hibernate@5.6.5,Vulnerable Library,High,117.0,Upgrade past <=5.6.5 to remediate CVE-2020-25638 (High).,True,False,False
+Finance System,jackson-databind@2.9.8,Vulnerable Library,High,106.0,Upgrade past <2.9.9 to remediate CVE-2019-12384 (High).,True,False,False
+Finance System,jackson-databind@2.9.8,Vulnerable Library,High,100.0,Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).,True,False,False
+Finance System,jackson-databind@2.9.8,Vulnerable Library,High,100.0,Upgrade past <2.12.6.1 to remediate CVE-2020-36518 (High).,True,False,False
+Finance System,express@4.17.1,Vulnerable Library,High,80.0,Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).,True,False,False
+Finance System,lodash@4.17.19,Unmaintained Library,Medium,30.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Finance System,jackson-databind@2.9.8,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Inventory Manager,openssl@1.0.2,Transitive Vulnerability,Critical,138.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2016-2108.,False,False,False
+Inventory Manager,openssl@1.0.2,Transitive Vulnerability,Critical,138.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-3711.,False,False,False
+Inventory Manager,openssl@1.0.2,Transitive Vulnerability,High,115.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2014-0160.,False,False,False
+Inventory Manager,commons-io@2.4,Transitive Vulnerability,Medium,105.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-29425.,False,False,False
+Inventory Manager,flask@2.1.0,Vulnerable Library,High,80.0,Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).,True,False,False
+Inventory Manager,openssl@1.0.2,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Inventory Manager,commons-io@2.4,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+CRM Platform,django@3.2.4,Vulnerable Library,Critical,123.0,Upgrade past <3.2.13 to remediate CVE-2022-28347 (Critical).,True,False,False
+CRM Platform,mysql-connector-java@8.0.28,License Conflict,Critical,35.0,Review legal implications of GPL-2.0 before shipping; consider an alternative library.,False,True,False
+CRM Platform,django@3.2.4,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Analytics Dashboard,tensorflow@2.8.0,Vulnerable Library,High,106.0,Upgrade past <=2.8.0 to remediate CVE-2021-37678 (High).,True,False,False
+Analytics Dashboard,requests@2.6.0,Transitive Vulnerability,Medium,101.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2018-18074.,False,False,False
+Analytics Dashboard,tensorflow@2.8.0,Vulnerable Library,High,100.0,Upgrade past <2.8.1 to remediate CVE-2022-29216 (High).,True,False,False
+Analytics Dashboard,tensorflow@2.8.0,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Analytics Dashboard,requests@2.6.0,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Customer Support System,express@4.17.1,Vulnerable Library,High,80.0,Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).,True,False,False
+Customer Support System,flask@2.1.0,Vulnerable Library,High,80.0,Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).,True,False,False
+Customer Support System,jackson-databind@2.13.0,Vulnerable Library,High,80.0,Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).,True,False,False
+HR Management System,hibernate@5.6.5,Vulnerable Library,High,117.0,Upgrade past <=5.6.5 to remediate CVE-2020-25638 (High).,True,False,False
+HR Management System,unknown-crypto-lib@0.9.0,License Conflict,High,45.0,Review legal implications of Unknown before shipping; consider an alternative library.,False,True,False
+HR Management System,unknown-crypto-lib@0.9.0,Unmaintained Library,Medium,45.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+HR Management System,spring-core@4.3.30,Unmaintained Library,Medium,25.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Payment Gateway,log4j@2.14.1,Transitive Vulnerability,Critical,150.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-44228.,False,False,False
+Payment Gateway,log4j@2.14.1,Transitive Vulnerability,Critical,140.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-45046.,False,False,False
+Payment Gateway,openssl@1.1.1k,Vulnerable Library,Critical,103.0,Upgrade past <=1.1.1k to remediate CVE-2021-3711 (Critical).,True,False,False
+Payment Gateway,spring-core@5.3.9,Vulnerable Library,Critical,103.0,Upgrade past >=5.3.0 <5.3.18 to remediate CVE-2022-22965 (Critical).,True,False,False
+Payment Gateway,openssl@1.1.1k,Vulnerable Library,Medium,64.0,Upgrade past 1.1.1k to remediate CVE-2025-3002 (Medium).,True,False,False
+Payment Gateway,log4j@2.14.1,Unmaintained Library,Medium,35.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Supply Chain Manager,lodash@4.17.19,Transitive Vulnerability,High,117.0,Upgrade the parent dependency that pulls this library in to remediate CVE-2021-23337.,False,False,False
+Supply Chain Manager,express@4.17.1,Vulnerable Library,High,80.0,Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).,True,False,False
+Supply Chain Manager,lodash@4.17.19,Unmaintained Library,Medium,30.0,Library has not been updated in 2+ years; evaluate for replacement or active fork.,False,False,True
+Supply Chain Manager,proprietary-scm-connector@3.2.0,License Conflict,High,5.0,Review legal implications of Proprietary before shipping; consider an alternative library.,False,True,False
+E-Commerce Platform,express@4.17.1,Vulnerable Library,High,80.0,Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).,True,False,False
+E-Commerce Platform,flask@2.1.0,Vulnerable Library,High,80.0,Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).,True,False,False
+E-Commerce Platform,jackson-databind@2.13.0,Vulnerable Library,High,80.0,Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).,True,False,False
+E-Commerce Platform,agpl-analytics-tracker@1.4.0,License Conflict,Critical,45.0,Review legal implications of AGPL-3.0 before shipping; consider an alternative library.,False,True,False

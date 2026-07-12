@@ -1,0 +1,631 @@
+{
+  "summary": {
+    "applications": 10,
+    "critical": 2,
+    "high": 3,
+    "medium": 5,
+    "low": 0
+  },
+  "applications": [
+    {
+      "application": "Employee Portal",
+      "risk_score": 463.0,
+      "risk_level": "High",
+      "total_dependencies": 5,
+      "vulnerable_dependencies": 1,
+      "license_conflicts": 1,
+      "unmaintained": 1,
+      "findings": [
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 150.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-44228.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 140.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-45046.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "spring-core@5.3.9",
+          "issue_type": "Vulnerable Library",
+          "severity": "Critical",
+          "risk_score": 103.0,
+          "recommendation": "Upgrade past >=5.3.0 <5.3.18 to remediate CVE-2022-22965 (Critical).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 35,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "gpl-core-utils@1.0.0",
+          "issue_type": "License Conflict",
+          "severity": "Critical",
+          "risk_score": 35,
+          "recommendation": "Review legal implications of GPL-3.0 before shipping; consider an alternative library.",
+          "is_vulnerable": false,
+          "is_license_conflict": true,
+          "is_unmaintained": false
+        }
+      ],
+      "business_criticality": "Critical",
+      "owner": "Arun"
+    },
+    {
+      "application": "Finance System",
+      "risk_score": 675.0,
+      "risk_level": "Critical",
+      "total_dependencies": 8,
+      "vulnerable_dependencies": 5,
+      "license_conflicts": 0,
+      "unmaintained": 2,
+      "findings": [
+        {
+          "library_name": "lodash@4.17.19",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "High",
+          "risk_score": 117.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-23337.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "hibernate@5.6.5",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 117.0,
+          "recommendation": "Upgrade past <=5.6.5 to remediate CVE-2020-25638 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "jackson-databind@2.9.8",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 106.0,
+          "recommendation": "Upgrade past <2.9.9 to remediate CVE-2019-12384 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "jackson-databind@2.9.8",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 100.0,
+          "recommendation": "Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "jackson-databind@2.9.8",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 100.0,
+          "recommendation": "Upgrade past <2.12.6.1 to remediate CVE-2020-36518 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "express@4.17.1",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "lodash@4.17.19",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 30,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "jackson-databind@2.9.8",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "Critical",
+      "owner": "Finance Team"
+    },
+    {
+      "application": "Inventory Manager",
+      "risk_score": 626.0,
+      "risk_level": "Critical",
+      "total_dependencies": 7,
+      "vulnerable_dependencies": 1,
+      "license_conflicts": 0,
+      "unmaintained": 2,
+      "findings": [
+        {
+          "library_name": "openssl@1.0.2",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 138.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2016-2108.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "openssl@1.0.2",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 138.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-3711.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "openssl@1.0.2",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "High",
+          "risk_score": 115.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2014-0160.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "commons-io@2.4",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Medium",
+          "risk_score": 105.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-29425.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "flask@2.1.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "openssl@1.0.2",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "commons-io@2.4",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "High",
+      "owner": "Operations Team"
+    },
+    {
+      "application": "CRM Platform",
+      "risk_score": 183.0,
+      "risk_level": "Medium",
+      "total_dependencies": 3,
+      "vulnerable_dependencies": 1,
+      "license_conflicts": 1,
+      "unmaintained": 1,
+      "findings": [
+        {
+          "library_name": "django@3.2.4",
+          "issue_type": "Vulnerable Library",
+          "severity": "Critical",
+          "risk_score": 123.0,
+          "recommendation": "Upgrade past <3.2.13 to remediate CVE-2022-28347 (Critical).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "mysql-connector-java@8.0.28",
+          "issue_type": "License Conflict",
+          "severity": "Critical",
+          "risk_score": 35,
+          "recommendation": "Review legal implications of GPL-2.0 before shipping; consider an alternative library.",
+          "is_vulnerable": false,
+          "is_license_conflict": true,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "django@3.2.4",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "High",
+      "owner": "Sales Team"
+    },
+    {
+      "application": "Analytics Dashboard",
+      "risk_score": 357.0,
+      "risk_level": "High",
+      "total_dependencies": 5,
+      "vulnerable_dependencies": 2,
+      "license_conflicts": 0,
+      "unmaintained": 2,
+      "findings": [
+        {
+          "library_name": "tensorflow@2.8.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 106.0,
+          "recommendation": "Upgrade past <=2.8.0 to remediate CVE-2021-37678 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "requests@2.6.0",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Medium",
+          "risk_score": 101.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2018-18074.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "tensorflow@2.8.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 100.0,
+          "recommendation": "Upgrade past <2.8.1 to remediate CVE-2022-29216 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "tensorflow@2.8.0",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "requests@2.6.0",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "Medium",
+      "owner": "Data Team"
+    },
+    {
+      "application": "Customer Support System",
+      "risk_score": 240.0,
+      "risk_level": "Medium",
+      "total_dependencies": 3,
+      "vulnerable_dependencies": 3,
+      "license_conflicts": 0,
+      "unmaintained": 0,
+      "findings": [
+        {
+          "library_name": "express@4.17.1",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "flask@2.1.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "jackson-databind@2.13.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        }
+      ],
+      "business_criticality": "Medium",
+      "owner": "Support Team"
+    },
+    {
+      "application": "HR Management System",
+      "risk_score": 232.0,
+      "risk_level": "Medium",
+      "total_dependencies": 4,
+      "vulnerable_dependencies": 1,
+      "license_conflicts": 1,
+      "unmaintained": 2,
+      "findings": [
+        {
+          "library_name": "hibernate@5.6.5",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 117.0,
+          "recommendation": "Upgrade past <=5.6.5 to remediate CVE-2020-25638 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "unknown-crypto-lib@0.9.0",
+          "issue_type": "License Conflict",
+          "severity": "High",
+          "risk_score": 45,
+          "recommendation": "Review legal implications of Unknown before shipping; consider an alternative library.",
+          "is_vulnerable": false,
+          "is_license_conflict": true,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "unknown-crypto-lib@0.9.0",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 45,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "spring-core@4.3.30",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 25,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "Medium",
+      "owner": "HR Team"
+    },
+    {
+      "application": "Payment Gateway",
+      "risk_score": 595.0,
+      "risk_level": "High",
+      "total_dependencies": 6,
+      "vulnerable_dependencies": 3,
+      "license_conflicts": 0,
+      "unmaintained": 1,
+      "findings": [
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 150.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-44228.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "Critical",
+          "risk_score": 140.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-45046.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "openssl@1.1.1k",
+          "issue_type": "Vulnerable Library",
+          "severity": "Critical",
+          "risk_score": 103.0,
+          "recommendation": "Upgrade past <=1.1.1k to remediate CVE-2021-3711 (Critical).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "spring-core@5.3.9",
+          "issue_type": "Vulnerable Library",
+          "severity": "Critical",
+          "risk_score": 103.0,
+          "recommendation": "Upgrade past >=5.3.0 <5.3.18 to remediate CVE-2022-22965 (Critical).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "openssl@1.1.1k",
+          "issue_type": "Vulnerable Library",
+          "severity": "Medium",
+          "risk_score": 64.0,
+          "recommendation": "Upgrade past 1.1.1k to remediate CVE-2025-3002 (Medium).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "log4j@2.14.1",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 35,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        }
+      ],
+      "business_criticality": "Critical",
+      "owner": "Payments Team"
+    },
+    {
+      "application": "Supply Chain Manager",
+      "risk_score": 232.0,
+      "risk_level": "Medium",
+      "total_dependencies": 4,
+      "vulnerable_dependencies": 1,
+      "license_conflicts": 1,
+      "unmaintained": 1,
+      "findings": [
+        {
+          "library_name": "lodash@4.17.19",
+          "issue_type": "Transitive Vulnerability",
+          "severity": "High",
+          "risk_score": 117.0,
+          "recommendation": "Upgrade the parent dependency that pulls this library in to remediate CVE-2021-23337.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "express@4.17.1",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "lodash@4.17.19",
+          "issue_type": "Unmaintained Library",
+          "severity": "Medium",
+          "risk_score": 30,
+          "recommendation": "Library has not been updated in 2+ years; evaluate for replacement or active fork.",
+          "is_vulnerable": false,
+          "is_license_conflict": false,
+          "is_unmaintained": true
+        },
+        {
+          "library_name": "proprietary-scm-connector@3.2.0",
+          "issue_type": "License Conflict",
+          "severity": "High",
+          "risk_score": 5,
+          "recommendation": "Review legal implications of Proprietary before shipping; consider an alternative library.",
+          "is_vulnerable": false,
+          "is_license_conflict": true,
+          "is_unmaintained": false
+        }
+      ],
+      "business_criticality": "High",
+      "owner": "Logistics Team"
+    },
+    {
+      "application": "E-Commerce Platform",
+      "risk_score": 285.0,
+      "risk_level": "Medium",
+      "total_dependencies": 4,
+      "vulnerable_dependencies": 3,
+      "license_conflicts": 1,
+      "unmaintained": 0,
+      "findings": [
+        {
+          "library_name": "express@4.17.1",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <4.17.3 to remediate CVE-2022-24999 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "flask@2.1.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <2.2.5 to remediate CVE-2023-30861 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "jackson-databind@2.13.0",
+          "issue_type": "Vulnerable Library",
+          "severity": "High",
+          "risk_score": 80.0,
+          "recommendation": "Upgrade past <2.13.4 to remediate CVE-2022-42003 (High).",
+          "is_vulnerable": true,
+          "is_license_conflict": false,
+          "is_unmaintained": false
+        },
+        {
+          "library_name": "agpl-analytics-tracker@1.4.0",
+          "issue_type": "License Conflict",
+          "severity": "Critical",
+          "risk_score": 45,
+          "recommendation": "Review legal implications of AGPL-3.0 before shipping; consider an alternative library.",
+          "is_vulnerable": false,
+          "is_license_conflict": true,
+          "is_unmaintained": false
+        }
+      ],
+      "business_criticality": "High",
+      "owner": "Product Team"
+    }
+  ]
+}
