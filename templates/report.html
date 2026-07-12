@@ -335,11 +335,41 @@
           <div class="row"><span>Issue Type</span><span>{{ finding.issue_type | default("&mdash;", true) }}</span></div>
           <div class="row"><span>Severity</span><span>{{ finding.severity | default("&mdash;", true) }}</span></div>
           {% if finding.description %}
-          <div class="desc">{{ finding.description }}</div>
+          <div class="desc">
+              <strong>Description:</strong><br>
+              {{ finding.description }}
+          </div>
           {% endif %}
           {% if finding.recommendation %}
           <div class="rec">&#128161; {{ finding.recommendation }}</div>
           {% endif %}
+          {% if finding.cve_id %}
+<div class="rec">
+  <strong>CVE:</strong> {{ finding.cve_id }}
+</div>
+{% endif %}
+
+
+{% if finding.remediation_steps %}
+<div class="rec">
+    🔧 <strong>Remediation:</strong><br>
+    {{ finding.remediation_steps }}
+</div>
+{% endif %}
+
+{% if finding.prevention_steps %}
+<div class="rec">
+    🛡️ <strong>Prevention:</strong><br>
+    {{ finding.prevention_steps }}
+</div>
+{% endif %}
+
+{% if finding.patched_version %}
+<div class="rec">
+    ✅ <strong>Patched Version:</strong>
+    {{ finding.patched_version }}
+</div>
+{% endif %}
         </div>
       {% endfor %}
     {% endfor %}

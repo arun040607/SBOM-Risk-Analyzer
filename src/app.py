@@ -48,6 +48,8 @@ def analyze():
 
     # STEP 2: Build the dependency graph once, reuse everywhere.
     graph = build_graph(dependencies_df)
+    save_dependency_graph(graph)  # save a PNG of the graph for reference
+
 
     # STEP 3-4: calculate_risk() already covers vulnerable + transitive
     # + license + unmaintained findings in one pass (risk_calculator.py).
@@ -86,15 +88,22 @@ def analyze():
         dependency_results = []
         for f in app_findings:
             dependency_results.append({
-                "library_name": f["library"],
-                "issue_type": f["issue_type"],
-                "severity": f["severity"],
-                "risk_score": f["risk_score"],
-                "recommendation": f["recommendation"],
-                "is_vulnerable": f["issue_type"] == "Vulnerable Library",
-                "is_license_conflict": f["issue_type"] == "License Conflict",
-                "is_unmaintained": f["issue_type"] == "Unmaintained Library",
-            })
+    "library_name": f["library"],
+    "issue_type": f["issue_type"],
+    "severity": f["severity"],
+    "risk_score": f["risk_score"],
+    "recommendation": f.get("recommendation", ""),
+
+    "cve_id": f.get("cve_id", ""),
+    "description": f.get("description", ""),
+    "remediation_steps": f.get("remediation_steps", ""),
+    "prevention_steps": f.get("prevention_steps", ""),
+    "patched_version": f.get("patched_version", ""),
+
+    "is_vulnerable": f["issue_type"] == "Vulnerable Library",
+    "is_license_conflict": f["issue_type"] == "License Conflict",
+    "is_unmaintained": f["issue_type"] == "Unmaintained Library",
+})
 
         app_report = generate_application_report(
             application_name=app_name,

@@ -260,7 +260,13 @@ def calculate_risk(dependencies_df, vulnerabilities, license_rules, graph=None, 
                 "issue_type": issue_type,
                 "severity": cve["severity"],
                 "risk_score": round(risk_score, 2),
+                "cve_id": cve.get("cve_id", ""),
+                "description": cve.get("description", ""),
+                "remediation_steps": cve.get("remediation_steps", ""),
+                "prevention_steps": cve.get("prevention_steps", ""),
+                "patched_version": cve.get("patched_version", ""),
                 "recommendation": _recommendation_for(issue_type, cve=cve),
+            
             })
 
         # --- 3: License conflicts (Critical/High risk licenses only) ---
