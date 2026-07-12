@@ -10,19 +10,22 @@ logic itself.
 from flask import Flask, render_template
 
 from parser import load_all
-from graph_builder import build_graph,save_dependency_graph
+from graph_builder import build_graph, save_dependency_graph
+
 from risk_calculator import calculate_risk
 from license_checker import check_licenses, summarize_by_license, summarize_by_application
 from report_generator import generate_application_report, generate_summary
 
-from flask import Flask
 import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_FOLDER = os.path.join(BASE_DIR, "data")
 
 app = Flask(
     __name__,
-    template_folder=os.path.join(os.path.dirname(__file__), "..", "templates")
+    template_folder=os.path.join(BASE_DIR, "templates")
 )
-DATA_FOLDER = "data"
+
 
 
 @app.route("/")
@@ -45,11 +48,9 @@ def analyze():
     dependencies_df = data["dependencies"]
     vulnerabilities = data["vulnerabilities"]
     license_rules = data["license_rules"]
-
     # STEP 2: Build the dependency graph once, reuse everywhere.
     graph = build_graph(dependencies_df)
-    save_dependency_graph(graph)  # save a PNG of the graph for reference
-
+    save_dependency_graph(graph)
 
     # STEP 3-4: calculate_risk() already covers vulnerable + transitive
     # + license + unmaintained findings in one pass (risk_calculator.py).

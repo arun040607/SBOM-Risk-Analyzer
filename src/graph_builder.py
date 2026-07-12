@@ -45,7 +45,6 @@ def save_dependency_graph(graph):
     plt.close()
 
     print("Dependency graph saved to output/dependency_graph.png")
-
 def _app_node(app_name):
     """Build the graph node id for an application."""
     return f"app:{app_name}"
