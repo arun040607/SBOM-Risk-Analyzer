@@ -20,7 +20,24 @@ accurate.
 """
 
 import networkx as nx
+import matplotlib.pyplot as plt
+def save_dependency_graph(graph):
+    plt.figure(figsize=(12, 8))
 
+    pos = nx.spring_layout(graph, seed=42)
+
+    nx.draw(
+        graph,
+        pos,
+        with_labels=True,
+        node_size=2500,
+        font_size=8,
+        arrows=True
+    )
+
+    plt.title("SBOM Dependency Graph")
+    plt.savefig("output/dependency_graph.png")
+    plt.close()
 
 def _app_node(app_name):
     """Build the graph node id for an application."""

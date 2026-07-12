@@ -103,6 +103,8 @@ def analyze():
             risk_level=risk_level,
             priority=priority
         )
+        app_report["business_criticality"] = application["business_criticality"]
+        app_report["owner"] = application["owner"]
         application_reports.append(app_report)
         application_reports.sort(key=lambda r: r["risk_score"], reverse=True)
         top_priority_apps = application_reports[:5]
