@@ -96,7 +96,7 @@ def analyze():
             risk_level = "Critical"
         elif total_risk_score >= 350:
             risk_level = "High"
-        elif total_risk_score >= 150:
+        elif total_risk_score >= 200
             risk_level = "Medium"
         else:
             risk_level = "Low"
