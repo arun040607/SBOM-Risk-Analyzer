@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBOM Risk Analyzer</title>
+<style>
+  :root {
+    --bg-deep: #060a14;
+    --bg-panel: #0d1526;
+    --bg-panel-2: #101c33;
+    --line: #1e2c47;
+    --text: #e7edf7;
+    --muted: #8ea0bd;
+    --accent: #3fd0ff;
+    --accent-2: #6c8cff;
+    --critical: #ff4d5e;
+    --high: #ff9f43;
+    --medium: #ffd93f;
+    --low: #38d996;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 20% 0%, #0c1830 0%, #060a14 55%);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .glow-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(63,208,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(63,208,255,0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  main { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 64px 24px 40px; }
+
+  .hero { text-align: center; max-width: 780px; margin-bottom: 48px; }
+  .hero .tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(63,208,255,0.35);
+    background: rgba(63,208,255,0.07);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ffffff, var(--accent) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 14px;
+  }
+  .hero h2 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 46px;
+  }
+  .feature-card {
+    background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 20px;
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(63,208,255,0.5);
+    box-shadow: 0 10px 30px rgba(63,208,255,0.12);
+  }
+  .feature-card .icon {
+    font-size: 26px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .feature-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .feature-card p {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .analyze-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, var(--accent-2), var(--accent));
+    color: #04101f;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 18px 44px;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(63,208,255,0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.3px;
+  }
+  .analyze-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(63,208,255,0.4);
+  }
+  .analyze-btn:active { transform: translateY(0); }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 22px 12px;
+    font-size: 12.5px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+  }
+  footer span { color: var(--accent); }
+
+  @media (max-width: 900px) {
+    .features { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 34px; }
+  }
+  @media (max-width: 500px) {
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="glow-grid"></div>
+<main>
+  <div class="hero">
+    <span class="tag">Supply Chain Security</span>
+    <h1>SBOM Risk Analyzer</h1>
+    <h2>Software Supply Chain Risk Scorer using Graph-Based Dependency Analysis</h2>
+    <p>
+      This application analyzes your software dependencies end-to-end — mapping
+      transitive dependency graphs, cross-referencing known vulnerabilities,
+      flagging outdated or unmaintained packages, and detecting license
+      compatibility conflicts — to produce a unified risk score per application.
+    </p>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="icon">&#9888;</div>
+      <h3>Vulnerability Detection</h3>
+      <p>Cross-references every dependency against known CVEs, including transitive ones.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">&#9878;</div>
+      <h3>License Compatibility</h3>
+      <p>Flags GPL, AGPL, and unknown licenses that introduce legal/compliance risk.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">&#9737;</div>
+      <h3>Dependency Graph Analysis</h3>
+      <p>Builds a directed graph of app-to-library relationships using NetworkX.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">&#128202;</div>
+      <h3>Risk Score Calculation</h3>
+      <p>Combines CVSS, license, maintenance, and depth penalties into one score.</p>
+    </div>
+  </div>
+
+  <a href="/analyze" class="analyze-btn">Analyze Applications &rarr;</a>
+</main>
+<footer>
+  Developed using <span>Flask</span>, <span>NetworkX</span>, <span>Pandas</span> and <span>Plotly</span>
+</footer>
+</body>
+</html>
