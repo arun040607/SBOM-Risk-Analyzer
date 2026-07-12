@@ -10,7 +10,7 @@ logic itself.
 from flask import Flask, render_template
 
 from parser import load_all
-from graph_builder import build_graph
+from graph_builder import build_graph,save_dependency_graph
 from risk_calculator import calculate_risk
 from license_checker import check_licenses, summarize_by_license, summarize_by_application
 from report_generator import generate_application_report, generate_summary
