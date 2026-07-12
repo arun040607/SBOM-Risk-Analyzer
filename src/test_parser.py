@@ -9,7 +9,6 @@ Run with:
     python src/test_parser.py
 (run from the project root, so the "data/" folder is found)
 """
-
 from parser import (
     load_applications,
     load_dependencies,

@@ -27,6 +27,7 @@ def generate_application_report(
     dependency_results: List[Dict[str, Any]],
     total_risk_score: float,
     risk_level: str,
+    priority: str
 ) -> Dict[str, Any]:
     """
     Build a single application's risk report.
@@ -82,6 +83,7 @@ def generate_application_report(
         "application": application_name,
         "risk_score": total_risk_score,
         "risk_level": risk_level,
+        "priority": priority,
         "total_dependencies": total_dependencies,
         "vulnerable_dependencies": vulnerable_count,
         "license_conflicts": license_conflict_count,

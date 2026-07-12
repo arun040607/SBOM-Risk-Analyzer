@@ -239,6 +239,31 @@
   </div>
 
   <!-- Applications Table -->
+   <!-- Applications to Fix First -->
+<h2 class="section-title">Applications to Fix First</h2>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Application</th>
+        <th>Risk Score</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for app in top_priority_apps %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ app.application }}</td>
+        <td>{{ app.risk_score }}</td>
+        <td>{{ app.priority }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
   <h2 class="section-title">Applications</h2>
   <div class="table-wrap">
     <table>
@@ -248,6 +273,7 @@
           <th>Business Criticality</th>
           <th>Risk Score</th>
           <th>Risk Level</th>
+          <th>Priority</th>
           <th>Vulnerabilities</th>
           <th>License Issues</th>
           <th>Unmaintained</th>
@@ -258,7 +284,7 @@
         {% for app in application_reports %}
         <tr>
           <td>{{ app.application }}</td>
-          <td>{{ app.business_criticality | default("&mdash;", true) }}</td>
+          <td>{{ app.business_criticality | default("N/A", true) }}</td>
           <td>{{ app.risk_score }}</td>
           <td>
             {% if app.risk_level == "Critical" %}
@@ -273,6 +299,7 @@
               <span class="badge badge-default">{{ app.risk_level }}</span>
             {% endif %}
           </td>
+          <td>{{ app.priority }}</td>
           <td>{{ app.vulnerable_dependencies }}</td>
           <td>{{ app.license_conflicts }}</td>
           <td>{{ app.unmaintained }}</td>
@@ -289,7 +316,7 @@
           </td>
         </tr>
         {% else %}
-        <tr><td colspan="8" style="text-align:center; color: var(--muted);">No applications analyzed.</td></tr>
+        <tr><td colspan="9" style="text-align:center; color: var(--muted);">No applications analyzed.</td></tr>
         {% endfor %}
       </tbody>
     </table>
